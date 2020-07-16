@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Adventure tours all over the world, tour and travel services"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="icons/icon-font.css" /> -->
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>ColorX | Dynamic Palette Generator</title>
+  </head>
+  <body class="opening">
+    <div class="container">
+      <div class="section-header"><h2>Color Palette</h2></div>
+      <!-- <div class="test">
+        <div class="testkit testkit0">1</div>
+        <div class="testkit testkit1">2</div>
+        <div class="testkit testkit2">3</div>
+        <div class="testkit testkit3">4</div>
+        <div class="testkit testkit4">5</div>
+      </div> -->
+      <div class="section-colors">
+        <div class="color">
+          <h2>HEX 0</h2>
+          <div class="btn-controls">
+            <button class="btn btn--primary setting">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+            <button class="btn btn--primary lock">
+              <i class="fas fa-lock-open"></i>
+            </button>
+          </div>
+          <div class="sliders">
+            <button class="btn sliders__close">X</button>
+            <span>Hue</span>
+            <!--Hue range is from 0 - 360-->
+            <input
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              name="hue"
+              class="hue-input"
+              data-hue="0"
+            />
+            <span>Brightness</span>
+            <!--Brightness range is from 0 - 100% 
+            
+          but because of the library we can only change from 0-1 so thinking more of 0-1 with a step of 0.1 -->
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="brightness"
+              class="bright-input"
+              data-bright="0"
+            />
+            <span>Saturation</span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="saturation"
+              class="sat-input"
+              data-sat="0"
+            />
+          </div>
+        </div>
+        <div class="color">
+          <h2>HEX 1</h2>
+          <div class="btn-controls">
+            <button class="btn btn--primary setting">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+            <button class="btn btn--primary lock">
+              <i class="fas fa-lock-open"></i>
+            </button>
+          </div>
+          <div class="sliders">
+            <button class="btn sliders__close">X</button>
+            <span>Hue</span>
+            <!--Hue range is from 0 - 360-->
+            <input
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              name="hue"
+              class="hue-input"
+              data-hue="1"
+            />
+            <span>Brightness</span>
+            <!--Brightness range is from 0 - 100% 
+            
+          but because of the library we can only change from 0-1 so thinking more of 0-1 with a step of 0.1 -->
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="brightness"
+              class="bright-input"
+              data-bright="1"
+            />
+            <span>Saturation</span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="saturation"
+              class="sat-input"
+              data-sat="1"
+            />
+          </div>
+        </div>
+        <div class="color">
+          <h2>Hex 2</h2>
+          <div class="btn-controls">
+            <button class="btn btn--primary setting">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+            <button class="btn btn--primary lock">
+              <i class="fas fa-lock-open"></i>
+            </button>
+          </div>
+          <div class="sliders">
+            <button class="btn sliders__close">X</button>
+            <span>Hue</span>
+            <!--Hue range is from 0 - 360-->
+            <input
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              name="hue"
+              class="hue-input"
+              data-hue="2"
+            />
+            <span>Brightness</span>
+            <!--Brightness range is from 0 - 100% 
+            
+          but because of the library we can only change from 0-1 so thinking more of 0-1 with a step of 0.1 -->
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="brightness"
+              class="bright-input"
+              data-bright="2"
+            />
+            <span>Saturation</span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="saturation"
+              class="sat-input"
+              data-sat="2"
+            />
+          </div>
+        </div>
+        <div class="color">
+          <h2>HEX 3</h2>
+          <div class="btn-controls">
+            <button class="btn btn--primary setting">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+            <button class="btn btn--primary lock">
+              <i class="fas fa-lock-open"></i>
+            </button>
+          </div>
+          <div class="sliders">
+            <button class="btn sliders__close">X</button>
+            <span>Hue</span>
+            <!--Hue range is from 0 - 360-->
+            <input
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              name="hue"
+              class="hue-input"
+              data-hue="3"
+            />
+            <span>Brightness</span>
+            <!--Brightness range is from 0 - 100% 
+            
+          but because of the library we can only change from 0-1 so thinking more of 0-1 with a step of 0.1 -->
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="brightness"
+              class="bright-input"
+              data-bright="3"
+            />
+            <span>Saturation</span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="saturation"
+              class="sat-input"
+              data-sat="3"
+            />
+          </div>
+        </div>
+        <div class="color">
+          <h2>HEX 4</h2>
+          <div class="btn-controls">
+            <button class="btn btn--primary setting">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+            <button class="btn btn--primary lock">
+              <i class="fas fa-lock-open"></i>
+            </button>
+          </div>
+          <div class="sliders">
+            <button class="btn sliders__close">X</button>
+            <span>Hue</span>
+            <!--Hue range is from 0 - 360-->
+            <input
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              name="hue"
+              class="hue-input"
+              data-hue="4"
+            />
+            <span>Brightness</span>
+            <!--Brightness range is from 0 - 100% 
+            
+          but because of the library we can only change from 0-1 so thinking more of 0-1 with a step of 0.1 -->
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="brightness"
+              class="bright-input"
+              data-bright="4"
+            />
+            <span>Saturation</span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              name="saturation"
+              class="sat-input"
+              data-sat="4"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-palette">
+        <div class="library-panel">
+          <button class="btn btn--secondary library">
+            <i class="fas fa-swatchbook"></i>
+          </button>
+          <p>Library</p>
+        </div>
+        <div class="generate-panel">
+          <button class="btn btn--secondary generate">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <p>Generate</p>
+        </div>
+        <div class="save-panel">
+          <button class="btn btn--secondary save">
+            <i class="fas fa-save"></i>
+          </button>
+          <p>Save</p>
+        </div>
+      </div>
+    </div>
+    <!--Popups-->
+    <div class="copy-container">
+      <div class="copy-popup">
+        <h3>Copied to clipboard</h3>
+        <h4>&#128077;</h4>
+      </div>
+    </div>
+
+    <div class="save-container">
+      <div class="save-popup">
+        <button class="close-save">X</button>
+        <h4>Assign Name to your Palette</h4>
+        <input type="text" max-length="50" class="save-name" />
+        <button type="submit" class="btn btn--secondary submit-save">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="library-container">
+      <button class="close-library">X</button>
+      <h4>Pick Your Palette</h4>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.container {
+  min-height: 100vh;
+  width: 90%;
+  margin: 8rem auto;
+  background: $color-grey-dark;
+  color: $color-white;
+  box-shadow: 0 0.5rem 4rem $color-black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.section-header {
+  min-height: 10vh;
+  text-align: center;
+  padding: 4rem;
+  background: $color-primary-dark;
+}
+.section-colors {
+  @include flex(row, space-evenly, space-evenly);
+  min-height: 60vh;
+  background: $color-grey-dark;
+}
+
+.section-palette {
+  @include flex(row, space-evenly, center);
+  max-width: 80%;
+  height: 20vh;
+  margin: auto;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+.test {
+  @include flex(row, space-evenly, center);
+  height: 20rem;
+  flex-wrap: wrap;
+}
+.testkit {
+  padding: 10rem;
+  font-size: 2rem;
+  background-color: red;
+}
