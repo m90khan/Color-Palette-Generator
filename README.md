@@ -2,7 +2,7 @@
 
 HTML5, CSS3(SCSS), JavaScript
 
-Live:
+Live:https://m90khan.github.io/Color-Palette-Generator/
 
 <ul>
 <li>Generate Random Colors . <a href="https://gka.github.io/chroma.js/">Chroma.js Used</a></li>
