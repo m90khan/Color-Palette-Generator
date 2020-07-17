@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  width: 90%;
+  width: 80%;
   margin: 8rem auto;
   background: $color-grey-dark;
   color: $color-white;
@@ -10,15 +10,17 @@
 }
 
 .section-header {
-  min-height: 10vh;
+  min-height: 5vh;
   text-align: center;
-  padding: 4rem;
+  padding: 3rem;
   background: $color-primary-dark;
 }
 .section-colors {
   @include flex(row, space-evenly, space-evenly);
   min-height: 60vh;
   background: $color-grey-dark;
+  border-top: 0.5rem solid white;
+  border-bottom: 0.5rem solid white;
 }
 
 .section-palette {
@@ -32,13 +34,42 @@
     margin-top: 1rem;
   }
 }
-.test {
+
+.brew {
   @include flex(row, space-evenly, center);
-  height: 20rem;
-  flex-wrap: wrap;
+  text-align: center;
+  &-color-box {
+    @include flex(row, center, center);
+    height: 20rem;
+    flex-wrap: wrap;
+    *:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+  &-color {
+    padding: 5rem;
+    font-size: 2rem;
+    background-color: red;
+  }
+
+  &-text-box {
+    input[type="color"] {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
 }
-.testkit {
-  padding: 10rem;
+
+.intro {
+  color: $color-grey-light-1;
+  position: absolute;
+  top: 2%;
+  right: 10%;
   font-size: 2rem;
-  background-color: red;
+  span {
+    text-decoration: line-through;
+    a {
+      color: $color-black;
+    }
+  }
 }
