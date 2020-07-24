@@ -1,14 +1,14 @@
 <br />
 <p align="center">
   <a href="https://www.thewebsitekitchen.com">
-    <img src="img/kick.png" alt="Logo" width="120" height="120">   <img src="img/hihat.png" alt="Logo" width="120" height="120">   <img src="img/snare.png" alt="Logo" width="120" height="120">
+    <img src="img/favicon.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Color Palette Generator</h3>
 
   <p align="center">
 Create custom Color Palettes  <br />
-    <a href="emailto:m90khan@gmail.com"><strong>Contact Me »</strong></a>
+    <a href="m90khan@gmail.com"><strong>Contact Me</strong></a>
     <br />
     <br />
     <a href="https://m90khan.github.io/Color-Palette-Generator/">View Demo</a>
