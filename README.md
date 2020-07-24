@@ -34,7 +34,7 @@ Live: https://m90khan.github.io/Color-Palette-Generator/
 #### Process
 
 - Generate Button invokes the color generator program
-- Generate Random Colors . <a href="https://gka.github.io/chroma.js/">Chroma.js Used
+- Generate Random Colors . <a href="https://gka.github.io/chroma.js/">Chroma.js Used </a>
 - Generate 5 random colors and append them to each div[i]
 - Change the text based on the colors
 - Change the color of the text [black, white] based on the luminance of the generated color background.
