@@ -31,30 +31,16 @@ Create custom Color Palettes  <br />
 Live: https://m90khan.github.io/Color-Palette-Generator/
 <img src="./img/overview.jpg">
 
-##### Process
+#### Process
 
-- Generate Random Colors . <a href="https://gka.github.io/chroma.js/">Chroma.js Used
 - Generate Button invokes the color generator program
+- Generate Random Colors . <a href="https://gka.github.io/chroma.js/">Chroma.js Used
 - Generate 5 random colors and append them to each div[i]
 - Change the text based on the colors
 - Change the color of the text [black, white] based on the luminance of the generated color background.
 - Add functionality to the input sliders for hue, brightness and saturation
 - Take the text innertext for the color and change the background of divs based on input change
 - Change the text of colors when slider input values are changes
-
-```javascript
-
-! Error: 1
-Whenever we change the saturation color to black, we lose the original color.
- and the brightness will either be black or white. and saturation is lost too. The solution would be to create a reference to initial colors . initialcolors array to save colors
-```
-
-```javascript
-
-! Error 2:
-* When we picked a different color from the input, the  input background does not change
-```
-
 - Add copy to clipboard. create a element to store the text ,execCommand to copy then del the element
   and active classes to the copy container for the 'copy to clipboard animation'
 - Add the active classes to the setting to toggle sliders panels along with active class to close the panel on close button
@@ -62,6 +48,22 @@ Whenever we change the saturation color to black, we lose the original color.
 - Save & Library : create another variable to store multiple objects to save into localstorae
 - first create an object of name (input value) , colors (innertext of colors), index number of savePalettes. then we check this to localStorage to check if null then empty else getItem
 - Generate Palette for the Library . create elements basedd on the data from Local storage
+
+```javascript
+/*
+! Error: 1
+Whenever we change the saturation color to black, we lose the original color.
+ and the brightness will either be black or white. and saturation is lost too. 
+ The solution would be to create a reference to initial colors . initialcolors array to save colors
+ */
+```
+
+```javascript
+/*
+! Error 2:
+* When we picked a different color from the input, the  input background does not change
+*/
+```
 
 ---
 
