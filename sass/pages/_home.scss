@@ -35,6 +35,9 @@
   }
 }
 
+.section-header-brew {
+  @include flex(row, space-evenly, center);
+}
 .brew {
   @include flex(row, space-evenly, center);
   text-align: center;
@@ -50,6 +53,7 @@
     padding: 5rem;
     font-size: 2rem;
     background-color: red;
+    cursor: pointer;
   }
 
   &-text-box {
