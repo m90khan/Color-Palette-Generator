@@ -63,7 +63,12 @@
     }
   }
 }
-
+.generate-brew {
+  background: $color-grey-dark;
+  &:hover {
+    color: white;
+  }
+}
 .intro {
   color: $color-grey-light-1;
   position: absolute;

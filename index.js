@@ -25,6 +25,8 @@ savePalettes.  then we check this to localStorage to check if null then empty el
 10.Generate Palette for the Library . create elements basedd on the data from Local storage
 */
 //Global selections and variables
+const gradientSection = document.querySelector(".section-gradient");
+
 const colorBoxes = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -99,8 +101,6 @@ const colorValue2 = document.querySelector(".value1");
 
 brewer(colorValue1.value, colorValue2.value);
 brewInputboxes.forEach((input, index) => {
-  const inputColor1 = colorValue1.value;
-  const inputColor2 = colorValue2.value;
   input.addEventListener("change", (e) => {
     for (i = 0; i <= brewInputboxes.length; i++) {
       const color1 = brewInputboxes[0];
@@ -122,19 +122,19 @@ generateBrew.addEventListener("click", (e) => {
 /* ___________    Functions      ___________*/
 //test COlor brewer
 function brewer(col1, col2) {
-  const inputColor1 = colorValue1.value;
-  const inputColor2 = colorValue2.value;
   const color1 = col1;
   const color2 = col2;
   const hexCode1 = chroma.scale([color1, color2]).mode("lch").colors(5);
-  for (let i = 0; i < hexCode1.length; i++) {
-    // console.log(hexCode[i]);
-    brewBoxes[i].style.backgroundColor = hexCode1[i];
-    brewBoxes[i].innerText = hexCode1[i];
 
-    brewSection.style.backgroundImage = `linear-gradient(to right, ${hexCode1})`;
-  }
+  brewBoxes.forEach((div, index) => {
+    div.style.backgroundColor = hexCode1[index];
+    div.innerText = hexCode1[index];
+    checkContrast(hexCode1[index], div);
+  });
+  gradientSection.style.backgroundImage = `linear-gradient(to right, ${hexCode1})`;
+  gradientSection.innerHTML = `<p>linear-gradient(to right, ${hexCode1})</p>`;
 }
+
 //enerate HEX
 function generateHex() {
   const color1 = chroma.random();
@@ -157,8 +157,10 @@ function generateHex() {
 function randomColor() {
   initialColors = [];
   colorBoxes.forEach((div, index) => {
-    const hexText = div.children[0];
     const randomCol = generateHex();
+    // console.log(chroma(randomCol).hex());
+
+    const hexText = div.children[0];
     //Add it to the array
     //check lock
     if (div.classList.contains("locked")) {
@@ -185,6 +187,7 @@ function randomColor() {
 
     colorizeSliders(color, hue, brightness, saturation);
   });
+
   // reset inputs
   resetInputs();
   //check for buttons contrasts
