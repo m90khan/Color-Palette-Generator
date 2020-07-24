@@ -39,7 +39,7 @@ const generateBrew = document.querySelector(".generate-brew");
 
 const brewBoxes = document.querySelectorAll(".brew-color");
 const brewSection = document.querySelector(".section-header-brew");
-
+const brewInputboxes = document.querySelectorAll(".brew-text-box input");
 let initialColors;
 let savePaletts = [];
 /* _________     EventListners      ___________*/
@@ -61,6 +61,13 @@ colorBoxes.forEach((div, index) => {
 currentHexes.forEach((hex) => {
   hex.addEventListener("click", () => {
     copyToClipboard(hex);
+  });
+});
+
+//Color Brewer
+brewBoxes.forEach((brewhex) => {
+  brewhex.addEventListener("click", () => {
+    copyToClipboard(brewhex);
   });
 });
 //clear copy box once transitionend
@@ -87,21 +94,41 @@ lockBtns.forEach((button, index) => {
     lockLayer(e, index);
   });
 });
+const colorValue1 = document.querySelector(".value2");
+const colorValue2 = document.querySelector(".value1");
 
-generateBrew.addEventListener("click", () => {
-  testcase();
+brewer(colorValue1.value, colorValue2.value);
+brewInputboxes.forEach((input, index) => {
+  const inputColor1 = colorValue1.value;
+  const inputColor2 = colorValue2.value;
+  input.addEventListener("change", (e) => {
+    for (i = 0; i <= brewInputboxes.length; i++) {
+      const color1 = brewInputboxes[0];
+      const color2 = brewInputboxes[1];
+      brewer(color1.value, color2.value);
+    }
+  });
 });
-testcase();
 
-/* ___________    Functions      ___________*/
-//test
-function testcase() {
+generateBrew.addEventListener("click", (e) => {
   const color1 = chroma.random();
   const color2 = chroma.random();
+  brewer(color1, color2);
+  colorValue2.value = color1.hex();
+  colorValue1.value = color2.hex();
+});
+// brewer();
+
+/* ___________    Functions      ___________*/
+//test COlor brewer
+function brewer(col1, col2) {
+  const inputColor1 = colorValue1.value;
+  const inputColor2 = colorValue2.value;
+  const color1 = col1;
+  const color2 = col2;
   const hexCode1 = chroma.scale([color1, color2]).mode("lch").colors(5);
   for (let i = 0; i < hexCode1.length; i++) {
     // console.log(hexCode[i]);
-
     brewBoxes[i].style.backgroundColor = hexCode1[i];
     brewBoxes[i].innerText = hexCode1[i];
 
@@ -332,6 +359,9 @@ function savePalette(e) {
   currentHexes.forEach((hex) => {
     colors.push(hex.innerText);
   });
+  // brewBoxes.forEach((hex) => {
+  //   colors.push(hex.innerText);
+  // });
   //fixing the index of color palette in library
   let palettsNr;
   const paletteObjects = JSON.parse(localStorage.getItem("palettes"));
