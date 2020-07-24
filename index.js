@@ -1,23 +1,23 @@
 /*
-0. Generate Button invokes the color generator program 
-1. Generate 5 random colors and append them to each div[i]
-2. change the text based on the colors
-3. change the color of the text [black, white] based on the luminance of the genrated color background. 
-4. Add functionality to the input sliders for hue, brightness and saturation
-5. take the text innertext for the color and change the background of divs based on input change
-5. Change the text of colors when slider input values are changes
-/ Error: 1 
-Whenever we change the saturation color to black, we lose the oriinal color.
- and the brightness will either be black or white. and saturation is lost too.
-  the solution would be to create a reference to initial colors . initialcolors array to save colors
-  Error 2: 
-  When we picked a different color from the input, the  input background does not change
+- 0. Generate Button invokes the color generator program 
+- 1. Generate 5 random colors and append them to each div[i]
+- 2. change the text based on the colors
+- 3. change the color of the text [black, white] based on the luminance of the genrated color background. 
+- 4. Add functionality to the input sliders for hue, brightness and saturation
+- 5. take the text innertext for the color and change the background of divs based on input change
+- 5. Change the text of colors when slider input values are changes
+! Error: 1 
+*Whenever we change the saturation color to black, we lose the oriinal color.
+* and the brightness will either be black or white. and saturation is lost too.
+*  the solution would be to create a reference to initial colors . initialcolors array to save colors
+ ! Error 2: 
+ * When we picked a different color from the input, the  input background does not change
 /
-6. Add copy to clipboard. create a element to store the text ,execCommand to copy then del the element
+- 6. Add copy to clipboard. create a element to store the text ,execCommand to copy then del the element
 and active classes to the copy container for the 'copy to clipboard animation'
-7. add the active classes to the setting to toggle sliders panels along with active class to close the panel on close button
-8. Add the lock functionality  check initalcolors before and aafter push colors and add locked class
-9. Save & Library : create another variable to store multiple objects to save into localstorae
+- 7. add the active classes to the setting to toggle sliders panels along with active class to close the panel on close button
+- 8. Add the lock functionality  check initalcolors before and aafter push colors and add locked class
+- 9. Save & Library : create another variable to store multiple objects to save into localstorae
 / first create an object of name (input value) , colors (innertext of colors), index number of 
 savePalettes.  then we check this to localStorage to check if null then empty else getItem
  
