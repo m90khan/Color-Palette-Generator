@@ -514,6 +514,11 @@ input[type="range"] {
     width: 10rem;
     height: 10rem; }
 
+.generate-brew {
+  background: #333; }
+  .generate-brew:hover {
+    color: white; }
+
 .intro {
   color: #faf9f9;
   position: absolute;
