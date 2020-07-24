@@ -30,6 +30,7 @@ Create custom Color Palettes  <br />
 
 Live: https://m90khan.github.io/Color-Palette-Generator/
 <img src="./img/overview.jpg">
+<img src="./img/overview-extend.jpg">
 
 #### Process
 
