@@ -340,8 +340,23 @@ closeSave.addEventListener("click", closePalette);
 submitSave.addEventListener("click", savePalette);
 libraryBtn.addEventListener("click", openLibrary);
 closeLibraryBtn.addEventListener("click", closeLibrary);
-resetLibrary.addEventListener("click", () => {
+resetLibrary.addEventListener("click", (e) => {
+  const x = document.querySelector(".custom-palette");
+
+  // const parent = x.parentElement;
+  // if (parent.children.classList(".custom-palette")) {
+  //   console.log(this);
+  // }
+  libraryContainer.classList.remove("--active");
   localStorage.clear();
+
+  if (x !== null) {
+    x.remove();
+    openLibrary();
+  } else {
+    closeLibrary();
+  }
+  // x.remove();
 });
 
 function openPalette(e) {
